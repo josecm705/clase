@@ -1,1 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" href="/static/css/style.css">
+</head>
 
+<body>
+
+<h1 class="titulo">AUTOMATIC SYSTEM</h1>
+
+<div class="panel">
+
+  <div class="bloque">
+    <h2>TEMPERATURE</h2>
+    <div class="fila">
+      <div id="temp" class="display"></div>
+      <div class="leds">
+        <div id="temp-baja" class="led"></div>
+        <div id="temp-media" class="led"></div>
+        <div id="temp-alta" class="led"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bloque">
+    <h2>STATUS</h2>
+    <div id="rango" class="display"></div>
+  </div>
+
+  <div class="bloque">
+    <h2>SPEED</h2>
+    <div class="fila">
+      <div id="vel" class="display"></div>
+      <div class="leds">
+        <div id="vel-baja" class="led"></div>
+        <div id="vel-media" class="led"></div>
+        <div id="vel-alta" class="led"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="controles">
+    <button onclick="control('START')" class="btn start">START</button>
+    <button onclick="control('STOP')" class="btn stop">STOP</button>
+  </div>
+
+</div>
+
+<a href="/logout" class="logout">EXIT</a>
+
+<script src="/static/js/app.js"></script>
+</body>
+</html>
