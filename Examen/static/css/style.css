@@ -1,0 +1,185 @@
+/* ===== BODY ===== */
+body{
+  margin:0;
+  font-family:monospace;
+  text-align:center;
+  color:white;
+  background:black;
+  position:relative;
+}
+
+/* 🎨 FONDO ESTILO CLANCY */
+body::before{
+  content:"";
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+
+  background:
+    radial-gradient(circle at 30% 30%, rgba(255,255,0,0.5), transparent 40%),
+    radial-gradient(circle at 70% 60%, rgba(255,0,0,0.6), transparent 50%),
+    radial-gradient(circle at 50% 80%, rgba(255,80,0,0.4), transparent 60%);
+
+  opacity:0.4;
+  z-index:-1;
+}
+
+/* ===== TITULO ===== */
+.titulo{
+  color:red;
+  margin-top:20px;
+  letter-spacing:3px;
+}
+
+/* ===== PANEL ===== */
+.panel{
+  max-width:500px;
+  margin:auto;
+}
+
+/* ===== BLOQUES ===== */
+.bloque{
+  border:1px solid yellow;
+  margin:20px 0;
+  padding:20px;
+  background:rgba(0,0,0,0.7);
+  box-shadow:0 0 10px yellow;
+}
+
+/* ===== FILA ===== */
+.fila{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:20px;
+}
+
+/* ===== DISPLAY ===== */
+.display{
+  background:black;
+  color:lime;
+  font-size:28px;
+  padding:10px 20px;
+  border:1px solid red;
+  box-shadow:0 0 10px red;
+}
+
+/* ===== LEDS ===== */
+.led{
+  width:20px;
+  height:20px;
+  border-radius:50%;
+  background:#222;
+}
+
+.leds{
+  display:flex;
+  gap:10px;
+}
+
+.verde{background:lime;}
+.amarillo{background:yellow;}
+.rojo{background:red;}
+
+/* 🔥 PARPADEO */
+.parpadeo{
+  animation:blink 0.7s infinite;
+}
+
+@keyframes blink{
+  50%{opacity:0.2;}
+}
+
+/* ===== BOTONES ===== */
+.controles{
+  margin-top:20px;
+}
+
+.btn{
+  padding:10px 20px;
+  border:none;
+  margin:5px;
+  cursor:pointer;
+  font-weight:bold;
+  border-radius:5px;
+}
+
+.start{
+  background:yellow;
+  color:black;
+  box-shadow:0 0 10px yellow;
+}
+
+.stop{
+  background:red;
+  color:white;
+  box-shadow:0 0 10px red;
+}
+
+/* ===== BOTON SALIR ===== */
+.logout{
+  position:fixed;
+  bottom:10px;
+  left:10px;
+  color:red;
+  text-decoration:none;
+}
+
+/* ===== LOGIN ===== */
+.login-body{
+  background:black;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  position:relative;
+}
+
+/* fondo clancy en login también */
+.login-body::before{
+  content:"";
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+
+  background:
+    radial-gradient(circle at 30% 30%, rgba(255,255,0,0.5), transparent 40%),
+    radial-gradient(circle at 70% 60%, rgba(255,0,0,0.6), transparent 50%);
+
+  opacity:0.4;
+  z-index:-1;
+}
+
+.login-box{
+  border:2px solid red;
+  padding:40px;
+  box-shadow:0 0 20px red;
+  background:rgba(0,0,0,0.8);
+}
+
+.login-title{
+  color:red;
+}
+
+.login-box input{
+  display:block;
+  margin:15px auto;
+  padding:10px;
+  width:200px;
+  background:black;
+  border:1px solid yellow;
+  color:yellow;
+}
+
+.btn-login{
+  background:red;
+  border:none;
+  padding:10px;
+  color:white;
+  cursor:pointer;
+  box-shadow:0 0 10px red;
+}
