@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<meta charset="UTF-8">
+<title>Panel de Control Motor</title>
+
+<link rel="stylesheet" href="/static/css/style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+<div class="top">
+
+<h2>⚙️ Panel de Control Motor</h2>
+
+<a href="/logout" class="logout">Cerrar sesión</a>
+
+</div>
+
+<div class="grid">
+
+<!-- RPM -->
+
+<div class="sensor">
+
+<h3>Velocidad (RPM)</h3>
+
+<div class="valor" id="rpm_valor">0</div>
+
+<div class="led-panel">
+<div class="led verde" id="rpm_verde"></div>
+<div class="led amarillo" id="rpm_amarillo"></div>
+<div class="led rojo" id="rpm_rojo"></div>
+</div>
+
+<canvas id="graficaRPM"></canvas>
+
+</div>
+
+
+<!-- VUELTAS -->
+
+<div class="sensor">
+
+<h3>Vueltas</h3>
+
+<div class="valor" id="vueltas_valor">0</div>
+
+<canvas id="graficaV"></canvas>
+
+</div>
+
+
+<!-- PULSOS -->
+
+<div class="sensor">
+
+<h3>Pulsos</h3>
+
+<div class="valor" id="pulsos_valor">0</div>
+
+</div>
+
+</div>
+
+<!-- CONTROL -->
+
+<div class="botones">
+
+<h3>Control del Motor</h3>
+
+<button class="stop" onclick="enviar(0)">⛔ PARO</button>
+<button class="izq" onclick="enviar(1)">↺ IZQUIERDA</button>
+<button class="der" onclick="enviar(2)">↻ DERECHA</button>
+
+</div>
+
+</div>
+
+<script src="/static/js/app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,133 @@
+/* ====== BASE ====== */
+body {
+    background: #0f172a;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    color: white;
+}
+
+/* ====== LAYOUT ====== */
+.dashboard {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+
+h1 {
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+/* ====== GRID ====== */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* ====== CARDS ====== */
+.card {
+    background: #1e293b;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.4);
+}
+
+/* ====== VALORES ====== */
+.valor {
+    font-size: 38px;
+    font-weight: bold;
+    text-align: center;
+    margin: 15px 0;
+}
+
+/* ====== LEDS ====== */
+.led-panel {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 10px 0;
+}
+
+.led {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #222;
+}
+
+/* Estados */
+.led.verde.activo {
+    background: #2cff7a;
+    box-shadow: 0 0 10px #2cff7a;
+}
+
+.led.amarillo.activo {
+    background: #ffd84a;
+    box-shadow: 0 0 10px #ffd84a;
+}
+
+.led.rojo.activo {
+    background: #ff4d4d;
+    box-shadow: 0 0 10px #ff4d4d;
+}
+
+/* ====== BOTONES CONTROL ====== */
+.botones {
+    margin: 25px 0;
+}
+
+button {
+    padding: 12px 20px;
+    margin: 8px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+/* Botones específicos */
+.stop {
+    background: #ff4d4d;
+    color: white;
+}
+
+.izq {
+    background: #3b82f6;
+    color: white;
+}
+
+.der {
+    background: #22c55e;
+    color: white;
+}
+
+/* ====== CANVAS (GRÁFICAS) ====== */
+canvas {
+    background: #0f172a;
+    border-radius: 10px;
+    padding: 8px;
+}
+
+/* ====== LOGOUT ====== */
+.logout {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 10px 20px;
+    background: #ff4d4d;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+/* ====== SENSOR BLOQUE ====== */
+.sensor {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
